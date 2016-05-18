@@ -3,8 +3,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>bookStore首页</title>
-<%--导入css --%>
+<title>ComputerStore home</title>
+<%--import css --%>
 <link rel="stylesheet" href="css/main.css" type="text/css" />
 </head>
 
@@ -13,7 +13,7 @@
 	<%@include file="head.jsp"%>
 	<%@include file="menu_search.jsp" %>
 	<div id="divad">
-		<img src="ad/index_ad.jpg" />
+		<img src="images/index_ad.jpg" />
 	</div>
 
 	<div id="divcontent">
@@ -23,20 +23,19 @@
 					height="38" />
 					<table cellspacing="0" class="ctl">
 						<tr>
-							<td>&middot;<a href="news.html" style="color:#000000">全场笔记本3折起，
-									先看再买不后悔,任何商品免费送货</a></td>
+							<td>&middot;<h1>News 1:<a href="${pageContext.request.contextPath}/product?method=showProductByPage2&category=Laptop" style="color:#FF0000">Laptop sales on fire!</a></td>
 						</tr>
 						<tr>
-							<td>&middot;<a href="news.html" style="color:#000000">新闻2</a></td>
+							<td>&middot;<h1>News 2:<a href="${pageContext.request.contextPath}/product?method=showProductByPage2&category=Desktop" style="color:#FF0000">Desktop sales on fire!</a></td>
 						</tr>
 						<tr>
-							<td>&middot;<a href="news.html" style="color:#000000">新闻3</a></td>
+							<td>&middot;<h1>News 3:<a href="${pageContext.request.contextPath}/product?method=showProductByPage2&category=Server" style="color:#FF0000">Server sales on fire!</a></td>
 						</tr>
 						<tr>
-							<td>&middot;<a href="news.html" style="color:#000000">新闻4</a></td>
+							<td>&middot;<h1>News 4:</h1><a style="color:#00FF00">New products </a>are coming!</td>
 						</tr>
 						<tr>
-							<td>&middot;<a href="news.html" style="color:#000000">新闻5</a></td>
+							<td>&middot;<h1>News 4:</h1><a style="color:#0000FF">New technology </a>is on the way!</a></td>
 						</tr>
 					</table></td>
 				<td style="padding:5px 15px 10px 40px"><table width="100%"
@@ -48,13 +47,13 @@
 					</table>
 					<table width="100%" border="0" cellspacing="0">
 						<tr>
-							<td style="width:50; text-align:center"><a href="info.html"><img
-									src="bookcover/Laptop005.jpg" width="102" height="130"
-									border="0" /> </a><br /> <a href="info.html">Laptop005<br />
-									品牌:外星1</a></td>
-							<td style="width:50; text-align:center"><a href="info.html"><img
-									src="bookcover/Desktop010.jpg" width="102" height="130" border="0" />
-							</a><br /> <a href="info.html">Desktop010 <br /> 品牌：外星2</a>
+							<td style="width:50; text-align:center"><a href="${ pageContext.request.contextPath }/product?method=showProduct&pid=b7e45585-45a2-4560-9c4e-b466b32e1c4f"><img
+									src="computercover/MacBookPro.jpg" width="102" height="130"
+									border="0" /> </a><br /> <a href="${ pageContext.request.contextPath }/product?method=showProduct&pid=b7e45585-45a2-4560-9c4e-b466b32e1c4f">Macbook Pro<br />
+									Brand:Apple</a></td>
+							<td style="width:50; text-align:center"><a href="${ pageContext.request.contextPath }/product?method=showProduct&pid=549f9d19-6280-4cc8-bafb-15d734220273"><img
+									src="computercover/DellInspron.jpg" width="102" height="130" border="0" />
+							</a><br /> <a href="${ pageContext.request.contextPath }/product?method=showProduct&pid=549f9d19-6280-4cc8-bafb-15d734220273">Dell Inspron <br /> Brand:Dell</a>
 							</td>
 						</tr>
 					</table></td>

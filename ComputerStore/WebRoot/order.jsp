@@ -1,43 +1,43 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="p" uri="http://www.itcast.cn./tag" %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitonal//EN">
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="p" uri="http://www.itcast.cn/tag"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title> ComputerStore </title>
-<link rel="stylesheet" href="css/main.css" type="text/css"/>
+<title>ComputerStore</title>
+<link rel="stylesheet" href="css/main.css" type="text/css" />
 <script type="text/javascript">
-//该方法用于提交表单 this way is used to hang on a sheet
-function submitOrder(){
-// get the object of DOM
-var orderForm=document.getElementById("orderForm");
-orderForm.submit();
-//this way euqal to click on submit button on a page to hang on something to
-//the web but not show it 吧表单数据提交到web服务器
-
-}
+	// 该方法用于提交表单
+	function submitOrder(){
+		// 获取表单DOM对象
+		var orderForm = document.getElementById("orderForm");
+		orderForm.submit();
+	}
 </script>
 </head>
 <body class="main">
-<!-- we should judge if this user had login or we should jump to the login page -->
-<c:if test="${empty user} ">
-<c: redirect url="url=/login,jsp" context="${pageContext.request.contextPath}"></c:>
+<!-- 判断用户是否登陆了，如果没有登陆，跳转到登陆页面登陆 -->
+<c:if test="${ empty user }">
+	<c:redirect url="/login.jsp" context="${ pageContext.request.contextPath }"></c:redirect>
 </c:if>
-<jsp:include page="head.jsp"/>
-<jsp:include page="menu_search.jsp"/>
-<div id="divpagecontext"=100%" border="0" cellspacing="0">
-<tr>
-		<td><div style="text-align:right; margin:5px 10px 5px 0px">
-		<a href="index.jsp">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a 
-		href="cart.jsp">&nbsp;Cart</a>&nbsp;&nbsp;&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;&nbsp;
-		Order</div>
-		<form id="orderForm" action="${pageContext.request.contextPath}/order" method="post">
-					
-		<input type="hidden" name="method" value="addOrder"/> 
-			<table cellspacing="0" class="infocontent">
-			<tr> 
-				<td><table width="100%" border="0" cellspacing="0" width="635" height="38"/>
-				
+	<jsp:include page="head.jsp" />
+
+	<jsp:include page="menu_search.jsp" />
+
+	<div id="divpagecontent">
+		<table width="100%" border="0" cellspacing="0">
+			<tr>
+
+				<td><div style="text-align:right; margin:5px 10px 5px 0px">
+						<a href="index.jsp">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a
+							href="cart.jsp">&nbsp;Cart</a>&nbsp;&nbsp;&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;&nbsp;Order
+					</div>
+
+					<form id="orderForm" action="${ pageContext.request.contextPath }/order" method="post">
+						<input type="hidden" name="method" value="addOrder"/>
+						<table cellspacing="0" class="infocontent">
+							<tr>
+								<td><table width="100%" border="0" cellspacing="0">
 										<tr>
 											<td><img src="images/buy2.gif" width="635" height="38" />
 												<p>Welcome： Mr./Ms.<font color="red">${ user.username }</font> to the settlement center!</p></td>
@@ -108,5 +108,3 @@ orderForm.submit();
 
 </body>
 </html>
-
-
